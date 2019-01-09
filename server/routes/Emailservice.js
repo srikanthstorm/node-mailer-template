@@ -11,8 +11,7 @@ exports.sendPasswordReset = function (email, title, description,from,password) {
   var password = password;  // password of the email to use
 
   var transporter = nodeMailer.createTransport(sender + ':' + password + '@smtp.gmail.com');
-  var sendResetPasswordLink = transporter.templateSender(new EmailTemplate('./template/sendFeeds'));
-  var sendSummaryEmail = transporter.templateSender(new EmailTemplate('./template/summaryMails'));
+  var sendResetPasswordLink = transporter.templateSender(new EmailTemplate('./node_modules/node-mailer-template/template/sendFeeds'));
 
     sendResetPasswordLink({
         to: email,
@@ -25,7 +24,7 @@ exports.sendPasswordReset = function (email, title, description,from,password) {
         source: "source"
     }, function (err, info) {
         if (err) {
-         //   console.log(err)
+            console.log(err)
         } else {
             console.log('Link sent\n'+ JSON.stringify(info));
         }
