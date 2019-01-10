@@ -20,7 +20,6 @@ mailer.sendEmailtoUsers("RecipientEmail","Title","Description","senderEmail",'se
  
 mailer.sendEmailtoUsers("toEmail@gmail.com","Title","Description","fromEmail%40gmail.com",'password');
 ```
- ![Screenshot](https://github.com/srikanthstorm/node-mailer-registrationtemplate/blob/master/template.png)
 
 
  ```bash
